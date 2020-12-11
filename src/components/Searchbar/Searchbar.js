@@ -37,7 +37,7 @@ class ContactForm extends Component {
           </button>
             <input
             value={this.state.imageName}
-            onChange={this.handleNameChange}
+            onChange={this.handleChange}
             className={s.SearchFormInput}
             type="text"
             autoComplete="off"

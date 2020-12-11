@@ -6,7 +6,6 @@ import Modal from './components/Modal/Modal'
 
 class App extends Component {
   state = {
-    
     imageName: '',
     showModal: false
   }
@@ -29,7 +28,7 @@ class App extends Component {
   
   render() {
     
-const {imageName, showModal} = this.state
+const {showModal} = this.state
 
     return (
       <>
