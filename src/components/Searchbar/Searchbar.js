@@ -1,12 +1,17 @@
 import React, { Component } from 'react';
-
+import { toast } from 'react-toastify';
 import s from './Searchbar.module.css'
+import PropTypes from 'prop-types';
 
-
-class ContactForm extends Component {
+class Searchbar extends Component {
   state = {
     imageName: '',
-  }
+  };
+
+  static propTypes = {
+    onSubmit: PropTypes.func.isRequired,
+  };
+
   
   handleChange = e => {
     
@@ -16,6 +21,10 @@ class ContactForm extends Component {
   handleSubmit = e => {
     
     e.preventDefault();
+    if (this.state.imageName.trim() === '') {
+      toast('NO DATA.');
+      return
+    }
     this.props.onSubmit(this.state.imageName);
 
     
@@ -50,4 +59,4 @@ class ContactForm extends Component {
   }
 }
 
-export default ContactForm;
+export default Searchbar;
