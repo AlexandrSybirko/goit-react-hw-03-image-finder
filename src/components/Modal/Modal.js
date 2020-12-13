@@ -24,10 +24,13 @@ window.removeEventListener('keydown', this.handleKeyDown)
     }
     
     render() {
+        const { src, alt } = this.props;
         return (
-            createPortal(
-                <div className={s.modalBackdrop} onClick={this.handleBackdropClick}>
-                <div className={s.modalContent}>{this.props.children}</div>
+                        createPortal(
+                <div className={s.Overlay} onClick={this.handleBackdropClick}>
+                    <div className={s.Modal}>
+                        <img src={src} alt={alt}/>
+                    </div>
             </div>, modalRoot)
             
         )

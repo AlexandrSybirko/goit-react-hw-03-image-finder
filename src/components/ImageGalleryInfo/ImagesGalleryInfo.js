@@ -22,9 +22,7 @@ class ImagesGalleryInfo extends Component {
     page: 1,
   };
 
-  static propTypes = {
-    imageName: PropTypes.string.isRequired,
-  };
+ 
 
   componentDidUpdate(prevProps, prevState) {
     const prevName = prevProps.imageName;
@@ -76,5 +74,9 @@ class ImagesGalleryInfo extends Component {
     }
   }
 }
+
+ImagesGalleryInfo.propTypes = {
+  imageName: PropTypes.string.isRequired,
+};
 
 export default ImagesGalleryInfo;

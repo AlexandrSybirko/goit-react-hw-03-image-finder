@@ -8,11 +8,7 @@ class Searchbar extends Component {
     imageName: '',
   };
 
-  static propTypes = {
-    onSubmit: PropTypes.func.isRequired,
-  };
-
-  
+   
   handleChange = e => {
     
     this.setState({ imageName: e.currentTarget.value.toLowerCase() })
@@ -58,5 +54,10 @@ class Searchbar extends Component {
     )
   }
 }
+
+
+  Searchbar.propTypes = {
+  onSubmit: PropTypes.func.isRequired,
+};
 
 export default Searchbar;
