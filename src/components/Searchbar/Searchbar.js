@@ -22,7 +22,7 @@ class Searchbar extends Component {
     
     e.preventDefault();
     if (this.state.imageName.trim() === '') {
-      toast('NO DATA.');
+      toast.info('NO DATA.');
       return
     }
     this.props.onSubmit(this.state.imageName);
