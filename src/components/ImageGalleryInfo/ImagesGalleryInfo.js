@@ -54,7 +54,7 @@ class ImagesGalleryInfo extends Component {
     const { error, status } = this.state;
 
     if (status === 'idle') {
-      return <p>Please enter your search term</p>;
+      return <p>enter your request</p>;
     }
 
     if (status === 'pending') {
