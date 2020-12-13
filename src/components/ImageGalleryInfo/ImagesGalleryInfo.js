@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import ImageGalleryErrorView from '../ImageGalleryErrorView/ImageGalleryErrorView';
 import ImageLoader from '../ImageLoader/ImageLoader';
 import ImageGallery from '../ImageGallery/ImageGallery';
-// import Button from '../Button/Button';
+import Button from '../Button/Button';
 import imagesAPI from '../services/images-api';
 
 
@@ -47,6 +47,7 @@ class ImagesGalleryInfo extends Component {
     this.setState(prevState => ({
       page: prevState.page + 1,
     }));
+
   };
 
   render() {
@@ -68,7 +69,7 @@ class ImagesGalleryInfo extends Component {
       return (
         <>
           <ImageGallery images={this.state.images.hits} />
-          {/* <Button onClick={this.onClickLoadMore} page={this.state.page} /> */}
+          <Button onClick={this.onClickLoadMore} page={this.state.page} />
         </>
       );
     }
@@ -80,3 +81,4 @@ ImagesGalleryInfo.propTypes = {
 };
 
 export default ImagesGalleryInfo;
+
