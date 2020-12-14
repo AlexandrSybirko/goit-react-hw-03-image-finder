@@ -16,7 +16,7 @@ const Status = {
 
 class ImagesGalleryInfo extends Component {
   state = {
-    images: null,
+    images: [],
     error: null,
     status: Status.IDLE,
     page: 1,
@@ -41,11 +41,14 @@ class ImagesGalleryInfo extends Component {
         .then(images => this.setState({ images, status: Status.RESOLVED }))
         .catch(error => this.setState({ error, status: Status.REJECTED }));
     }
+
   }
+
 
   onClickLoadMore = () => {
     this.setState(prevState => ({
       page: prevState.page + 1,
+      
     }));
 
   };
